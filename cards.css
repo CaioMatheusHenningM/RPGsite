@@ -1,0 +1,45 @@
+.habs{
+    padding: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+p{font-size: 13pt;}
+
+.habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: left;
+    
+}
+.cards{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    text-align: justify;
+}
+
+#card1, #card2, #card3{
+    visibility: hidden;
+}
+
+.habs:has(input[value="novato"]:checked){
+    & #card1{
+    visibility: visible;
+    }
+}
+
+.habs:has(input[value="adepto"]:checked){
+    & #card2{
+        visibility: visible;
+        }
+    
+}
+
+.habs:has(input[value="mestre"]:checked){
+    & #card3{
+        visibility: visible;
+        }
+}
+
